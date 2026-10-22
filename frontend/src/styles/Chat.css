@@ -1,0 +1,175 @@
+.mainChatDiv {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  font-family: "Geist Mono", monospace;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.asideDiv {
+  /* remove width: 20%, it conflicts with this */
+  flex: 0 0 14rem;
+  height: 100%;
+
+  position: relative;
+  z-index: 1;
+  background: var(--sidebar);
+  box-shadow: -1rem 0 3rem 0 var(--shadow);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  padding: 1rem 0.75rem;
+}
+
+.brandDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 2rem;
+}
+
+.brandPara {
+  margin: 0;
+  font-size: xx-large;
+  font-weight: bold;
+
+  color: var(--primary);
+}
+
+.fileDiv {
+  flex: 1; /* pushes exit button to the bottom */
+  min-height: 0;
+}
+
+.fileName {
+  margin: 0;
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+  color: var(--primary);
+  overflow-wrap: anywhere;
+}
+
+.exitButtonDiv {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.chatDiv {
+  flex: 1;
+  min-height: 0; /* required so overflow-y works inside flex */
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1rem 1.5rem;
+}
+
+.query {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.queryInput {
+  flex: 1;
+  min-width: 0;
+  padding: 0.6rem 1rem;
+
+  border-radius: 1rem;
+
+  font: inherit;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  color: var(--text);
+}
+
+.queryInput:focus {
+  outline: none;
+
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.25);
+}
+
+.chatbox {
+  flex: 1;
+  min-width: 0; /* lets it shrink, prevents horizontal overflow */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.queryForm {
+  flex: 0 0 auto;
+  padding: 0.75rem 1.5rem 1rem;
+  background: var(--bg);
+}
+
+.queryButton,
+.exitButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  font-family: "Geist Mono", monospace;
+  font-weight: bold;
+
+  cursor: pointer;
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.queryButton:hover,
+.exitButton:hover {
+  background: var(--primary-hover);
+  color: var(--on-primary);
+  border-color: var(--primary-hover);
+}
+
+.responseQuery {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  background: var(--primary);
+  color: var(--on-primary);
+  border-radius: 1rem;
+  overflow-wrap: anywhere;
+}
+.responseAnswer {
+  margin: 0.75rem 0 1.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+.responseAnswer pre {
+  background: var(--surface-soft);
+}
+
+.responseAnswer > :first-child {
+  margin-top: 0;
+}
+.responseAnswer > :last-child {
+  margin-bottom: 0;
+}
+.responseAnswer pre {
+  overflow-x: auto; /* code scrolls inside its own box */
+  padding: 0.75rem;
+  background: #fbf4ff;
+  border-radius: 0.5rem;
+}
+
+.responseAnswer table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}

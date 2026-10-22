@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+langchain-community
+langchain-core
+pymupdf
+sentence-transformers
+faiss-cpu
+chromadb
+langchain-groq
+python-dotenv
+pymupdf4llm

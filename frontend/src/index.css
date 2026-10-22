@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+:root {
+  --bg:            #faf3ff;  /* chat background */
+  --sidebar:       #f1e0fb;  /* sidebar */
+  --surface:       #ffffff;  /* answer bubbles, input */
+  --surface-soft:  #f6e7ff;  /* code blocks, subtle fills */
+  --border:        #dcbdf0;
+  --text:          #2a0136;
+  --text-muted:    #7a5a8a;
+  --primary:       #400250;  /* buttons, user bubbles */
+  --primary-hover: #641877;
+  --on-primary:    #fbf4ff;
+  --accent:        #2ec4b6;  /* focus ring, highlights */
+  --shadow:        rgba(100, 24, 119, 0.25);
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* page itself doesn't scroll */
+  font-family: "Geist Mono", monospace;
+}
